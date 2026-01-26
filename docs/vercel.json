@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "installCommand": "uv pip install --system mkdocs-material mkdocstrings[python]",
-  "buildCommand": "python -m mkdocs build",
+  "installCommand": "uv pip install mkdocs-material mkdocstrings[python]",
+  "buildCommand": "uv run mkdocs build",
   "outputDirectory": "site",
   "headers": [
     {
