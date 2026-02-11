@@ -1842,3 +1842,79 @@ artificial general intelligence agent, AGI agent, narrow AI agent, weak AI agent
 *Total Keywords: 6500+*
 *Last Updated: January 29, 2026*
 </details>
+
+
+---
+
+## 🌐 Live HTTP Deployment
+
+**BNBChain MCP** is deployed and accessible over HTTP via [MCP Streamable HTTP](https://modelcontextprotocol.io/specification/2025-03-26/basic/transports#streamable-http) transport — no local installation required.
+
+**Endpoint:**
+```
+https://modelcontextprotocol.name/mcp/bnbchain-mcp
+```
+
+### Connect from any MCP Client
+
+Add to your MCP client configuration (Claude Desktop, Cursor, SperaxOS, etc.):
+
+```json
+{
+  "mcpServers": {
+    "bnbchain-mcp": {
+      "type": "http",
+      "url": "https://modelcontextprotocol.name/mcp/bnbchain-mcp"
+    }
+  }
+}
+```
+
+### Available Tools (6)
+
+| Tool | Description |
+|------|-------------|
+| `get_price` | Get crypto prices |
+| `get_market_overview` | Market overview |
+| `search_coins` | Search |
+| `get_bsc_defi` | BSC DeFi protocols |
+| `get_bnb_price` | BNB price data |
+| `get_bsc_token` | BSC token lookup |
+
+### Example Requests
+
+**Get crypto prices:**
+```bash
+curl -X POST https://modelcontextprotocol.name/mcp/bnbchain-mcp \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"get_price","arguments":{"ids":"binancecoin","vs_currencies":"usd"}}}'
+```
+
+**Market overview:**
+```bash
+curl -X POST https://modelcontextprotocol.name/mcp/bnbchain-mcp \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"get_market_overview","arguments":{"limit":10}}}'
+```
+
+**Search:**
+```bash
+curl -X POST https://modelcontextprotocol.name/mcp/bnbchain-mcp \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"search_coins","arguments":{"query":"bnb"}}}'
+```
+
+### List All Tools
+
+```bash
+curl -X POST https://modelcontextprotocol.name/mcp/bnbchain-mcp \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'
+```
+
+### Also Available On
+
+- **[SperaxOS](https://speraxos.vercel.app)** — Browse and install from the [MCP marketplace](https://speraxos.vercel.app/community/mcp)
+- **All 27 MCP servers** — See the full catalog at [modelcontextprotocol.name](https://modelcontextprotocol.name)
+
+> Powered by [modelcontextprotocol.name](https://modelcontextprotocol.name) — the open MCP HTTP gateway
