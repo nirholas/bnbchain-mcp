@@ -48,7 +48,7 @@
 
 <br/>
 
-[📖 Documentation](https://bnb-chain-mcp.vercel.app) • [🚀 Quick Start](#-quick-start) • [🛠️ Features](#-features-overview) • [📊 Roadmap](#️-roadmap) • [🤝 Contributing](#-contributing)
+[📖 Documentation](https://bnbchainmcp.vercel.app) • [🚀 Quick Start](#-quick-start) • [🛠️ Features](#-features-overview) • [📊 Roadmap](#️-roadmap) • [🤝 Contributing](#-contributing)
 
 </div>
 
@@ -231,7 +231,7 @@ Add to your MCP settings:
 4. Enter your server URL: `http://localhost:3001/mcp`
 5. Select the app in conversations via **Developer mode** menu
 
-📖 [Full ChatGPT Setup Guide](https://bnb-chain-mcp.vercel.app/mcp-server/chatgpt-setup/)
+📖 [Full ChatGPT Setup Guide](https://bnbchainmcp.vercel.app/mcp-server/chatgpt-setup/)
 
 ### Option 4: npx Instant Start
 
@@ -288,7 +288,7 @@ npx @nirholas/bnb-chain-mcp@latest --sse
 | `estimate_gas` | Estimate gas for transaction |
 | `get_balance` | Get native/token balance |
 | `call_contract` | Call view/pure contract functions |
-| ... | [See full list →](https://bnb-chain-mcp.vercel.app/tools/blockchain) |
+| ... | [See full list →](https://bnbchainmcp.vercel.app/tools/blockchain) |
 
 </details>
 
@@ -303,7 +303,7 @@ npx @nirholas/bnb-chain-mcp@latest --sse
 | `approve_token` | Approve spending allowance |
 | `get_nft_metadata` | Get NFT metadata and traits |
 | `transfer_nft` | Transfer ERC-721 NFT |
-| ... | [See full list →](https://bnb-chain-mcp.vercel.app/tools/tokens) |
+| ... | [See full list →](https://bnbchainmcp.vercel.app/tools/tokens) |
 
 </details>
 
@@ -318,7 +318,7 @@ npx @nirholas/bnb-chain-mcp@latest --sse
 | `get_lending_rates` | Get Aave/Compound rates |
 | `supply_to_lending` | Supply assets to lending protocol |
 | `get_farming_apy` | Get yield farming APY |
-| ... | [See full list →](https://bnb-chain-mcp.vercel.app/tools/defi) |
+| ... | [See full list →](https://bnbchainmcp.vercel.app/tools/defi) |
 
 </details>
 
@@ -333,7 +333,7 @@ npx @nirholas/bnb-chain-mcp@latest --sse
 | `get_holder_distribution` | Get top holder breakdown |
 | `check_contract_verified` | Verify contract source |
 | `screen_address` | Check address risk score |
-| ... | [See full list →](https://bnb-chain-mcp.vercel.app/tools/security) |
+| ... | [See full list →](https://bnbchainmcp.vercel.app/tools/security) |
 
 </details>
 
@@ -348,7 +348,7 @@ npx @nirholas/bnb-chain-mcp@latest --sse
 | `get_tvl` | Get protocol TVL from DefiLlama |
 | `get_dex_pools` | Get DEX pool data |
 | `get_social_metrics` | Get LunarCrush sentiment |
-| ... | [See full list →](https://bnb-chain-mcp.vercel.app/tools/market-data) |
+| ... | [See full list →](https://bnbchainmcp.vercel.app/tools/market-data) |
 
 </details>
 
