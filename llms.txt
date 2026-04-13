@@ -67,7 +67,7 @@ BNB Chain MCP is a TypeScript-based MCP server providing 175+ tools for comprehe
 
 ## Links
 
-- Documentation: https://bnb-chain-mcp.vercel.app
+- Documentation: https://bnbchainmcp.vercel.app
 - GitHub: https://github.com/nirholas/bnb-chain-mcp
 - npm: @nirholas/bnb-chain-mcp
 
