@@ -25,8 +25,6 @@
 <p><strong>The most comprehensive Model Context Protocol server for BNB Chain & EVM blockchains</strong></p>
 
 <p>Enable AI agents to interact with BNB Chain, opBNB, and other EVM networks through natural language</p>
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 [![MCP](https://img.shields.io/badge/MCP-Compatible-purple?style=flat-square)](https://modelcontextprotocol.io)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![BNB Chain](https://img.shields.io/badge/BNB_Chain-Native-F0B90B?style=flat-square&logo=binance)](https://www.bnbchain.org)
@@ -35,7 +33,6 @@
 
 [![BNB Chain](https://img.shields.io/badge/BNB_Chain-F0B90B?style=for-the-badge&logo=binance&logoColor=white)](https://www.bnbchain.org)
 [![opBNB](https://img.shields.io/badge/opBNB-F0B90B?style=for-the-badge&logo=binance&logoColor=white)](https://opbnb.bnbchain.org)
-
 
 <br/>
 
@@ -1842,7 +1839,6 @@ artificial general intelligence agent, AGI agent, narrow AI agent, weak AI agent
 *Total Keywords: 6500+*
 *Last Updated: January 29, 2026*
 </details>
-
 
 ---
 
