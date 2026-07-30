@@ -31,7 +31,7 @@ const PLUGIN_CATEGORIES = [
 // Types
 // ============================================================================
 
-interface PluginMeta {
+export interface PluginMeta {
   avatar: string;
   title: string;
   description: string;
@@ -39,7 +39,7 @@ interface PluginMeta {
   category?: string;
 }
 
-interface PluginApi {
+export interface PluginApi {
   name: string;
   description: string;
   url?: string;
@@ -50,7 +50,7 @@ interface PluginApi {
   };
 }
 
-interface PluginManifest {
+export interface PluginManifest {
   identifier: string;
   api: PluginApi[];
   meta: PluginMeta;
@@ -60,7 +60,7 @@ interface PluginManifest {
   author?: string;
 }
 
-interface PluginIndexItem {
+export interface PluginIndexItem {
   identifier: string;
   author: string;
   createdAt: string;
@@ -70,7 +70,7 @@ interface PluginIndexItem {
   schemaVersion: number;
 }
 
-interface PluginIndex {
+export interface PluginIndex {
   schemaVersion: number;
   name: string;
   description: string;

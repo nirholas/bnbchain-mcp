@@ -36,7 +36,7 @@ Claude Desktop uses the MCP (Model Context Protocol) to extend Claude's capabili
   "mcpServers": {
     "bnb-chain-mcp": {
       "command": "npx",
-      "args": ["-y", "@nirholas/bnb-chain-mcp@latest"],
+      "args": ["-y", "@nirholas/bnbchain-mcp@latest"],
       "env": {
         "PRIVATE_KEY": "your_private_key_here"
       }
@@ -62,7 +62,7 @@ For read-only operations (no wallet needed):
   "mcpServers": {
     "bnb-chain-mcp": {
       "command": "npx",
-      "args": ["-y", "@nirholas/bnb-chain-mcp@latest"]
+      "args": ["-y", "@nirholas/bnbchain-mcp@latest"]
     }
   }
 }
@@ -77,7 +77,7 @@ For write operations (transactions, swaps, etc.):
   "mcpServers": {
     "bnb-chain-mcp": {
       "command": "npx",
-      "args": ["-y", "@nirholas/bnb-chain-mcp@latest"],
+      "args": ["-y", "@nirholas/bnbchain-mcp@latest"],
       "env": {
         "PRIVATE_KEY": "0x...",
         "COINGECKO_API_KEY": "your_key",
@@ -163,7 +163,7 @@ For maximum security, don't store the key:
   "mcpServers": {
     "bnb-chain-mcp": {
       "command": "npx",
-      "args": ["-y", "@nirholas/bnb-chain-mcp@latest"]
+      "args": ["-y", "@nirholas/bnbchain-mcp@latest"]
     }
   }
 }
@@ -312,7 +312,7 @@ Configure default networks per use case:
   "mcpServers": {
     "crypto-mainnet": {
       "command": "npx",
-      "args": ["-y", "@nirholas/bnb-chain-mcp@latest"],
+      "args": ["-y", "@nirholas/bnbchain-mcp@latest"],
       "env": {
         "DEFAULT_NETWORK": "ethereum",
         "PRIVATE_KEY": "0x..."
@@ -320,7 +320,7 @@ Configure default networks per use case:
     },
     "crypto-testnet": {
       "command": "npx",
-      "args": ["-y", "@nirholas/bnb-chain-mcp@latest"],
+      "args": ["-y", "@nirholas/bnbchain-mcp@latest"],
       "env": {
         "DEFAULT_NETWORK": "sepolia",
         "PRIVATE_KEY": "0x..."

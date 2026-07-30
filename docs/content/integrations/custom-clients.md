@@ -89,10 +89,10 @@ class MCPClient:
         """Initialize MCP client.
         
         Args:
-            server_command: Command to start server (e.g., ["npx", "-y", "@nirholas/bnb-chain-mcp"])
+            server_command: Command to start server (e.g., ["npx", "-y", "@nirholas/bnbchain-mcp"])
             env: Environment variables for the server
         """
-        self.server_command = server_command or ["npx", "-y", "@nirholas/bnb-chain-mcp@latest"]
+        self.server_command = server_command or ["npx", "-y", "@nirholas/bnbchain-mcp@latest"]
         self.env = env or {}
         self.process = None
         self.request_id = 0
@@ -269,7 +269,7 @@ class AsyncMCPClient:
     """Async MCP client for BNB-Chain-MCP."""
     
     def __init__(self, server_command: list[str] = None, env: dict = None):
-        self.server_command = server_command or ["npx", "-y", "@nirholas/bnb-chain-mcp@latest"]
+        self.server_command = server_command or ["npx", "-y", "@nirholas/bnbchain-mcp@latest"]
         self.env = env or {}
         self.process = None
         self.request_id = 0
@@ -438,7 +438,7 @@ class MCPClient {
   }>();
 
   constructor(
-    private serverCommand: string[] = ['npx', '-y', '@nirholas/bnb-chain-mcp@latest'],
+    private serverCommand: string[] = ['npx', '-y', '@nirholas/bnbchain-mcp@latest'],
     private env: Record<string, string> = {}
   ) {}
 
@@ -727,7 +727,7 @@ func NewMCPClient() *MCPClient {
 }
 
 func (c *MCPClient) Connect() error {
-    c.cmd = exec.Command("npx", "-y", "@nirholas/bnb-chain-mcp@latest")
+    c.cmd = exec.Command("npx", "-y", "@nirholas/bnbchain-mcp@latest")
     
     stdin, _ := c.cmd.StdinPipe()
     stdout, _ := c.cmd.StdoutPipe()
@@ -868,7 +868,7 @@ struct MCPClient {
 impl MCPClient {
     fn new() -> Result<Self, Box<dyn std::error::Error>> {
         let process = Command::new("npx")
-            .args(["-y", "@nirholas/bnb-chain-mcp@latest"])
+            .args(["-y", "@nirholas/bnbchain-mcp@latest"])
             .stdin(Stdio::piped())
             .stdout(Stdio::piped())
             .spawn()?;

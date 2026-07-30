@@ -107,10 +107,11 @@ export const analyticsTools = [
         const spaPrice = 0.05; // Would come from oracle
         const stakingTvl = Number(formatUnits(spaStaked, 18)) * spaPrice;
 
-        // Farming TVL would come from Demeter registry
-        const farmingTvl = 5000000; // Placeholder - would query farm registry
-
-        const totalTvl = vaultTvl + stakingTvl + farmingTvl;
+        // Farming TVL is not included: Demeter farms report totalStaked in
+        // staking-token (LP) units and this server has no on-chain USD price
+        // source for those LP tokens. Rather than report a fabricated number,
+        // farming is excluded from the total and surfaced as unavailable.
+        const totalTvl = vaultTvl + stakingTvl;
 
         return {
           success: true,
@@ -137,9 +138,8 @@ export const analyticsTools = [
                 spaPrice: `$${spaPrice}`,
               },
               farming: {
-                tvl: `$${farmingTvl.toLocaleString()}`,
-                percentage: formatPercentage(farmingTvl / totalTvl),
-                note: 'Includes all Demeter farms',
+                tvl: null,
+                note: 'Demeter farm TVL is not available in USD: farms report totalStaked in LP-token units and no on-chain USD price feed for those tokens is wired here. Use the demeter_list_farms tool for per-farm staked amounts. Not included in totalTvl.',
               },
             },
             ranking: {

@@ -21,10 +21,10 @@ HTTP mode enables BNB-Chain-MCP to serve requests over HTTP, making it compatibl
 
 ```bash
 # Using npx (recommended)
-npx @nirholas/bnb-chain-mcp@latest --http
+npx @nirholas/bnbchain-mcp@latest --http
 
 # With environment variables
-PRIVATE_KEY=0x... PORT=3001 npx @nirholas/bnb-chain-mcp@latest --http
+PRIVATE_KEY=0x... PORT=3001 npx @nirholas/bnbchain-mcp@latest --http
 
 # Local development
 cd bnb-chain-mcp
@@ -55,7 +55,7 @@ bun run dev:http
 #### 1. Start the Server
 
 ```bash
-npx @nirholas/bnb-chain-mcp@latest --http
+npx @nirholas/bnbchain-mcp@latest --http
 ```
 
 Server starts at `http://localhost:3001`
@@ -439,7 +439,7 @@ app.get('/metrics', async (req, res) => {
 
 ```bash
 # Enable structured logging
-LOG_FORMAT=json LOG_LEVEL=INFO npx @nirholas/bnb-chain-mcp --http
+LOG_FORMAT=json LOG_LEVEL=INFO npx @nirholas/bnbchain-mcp --http
 
 # Output
 {"level":"info","timestamp":"2024-01-26T12:00:00Z","message":"Tool called","tool":"market_get_coin_by_id","duration":245}
@@ -462,7 +462,7 @@ LOG_FORMAT=json LOG_LEVEL=INFO npx @nirholas/bnb-chain-mcp --http
 ### Debug Mode
 
 ```bash
-LOG_LEVEL=DEBUG npx @nirholas/bnb-chain-mcp --http
+LOG_LEVEL=DEBUG npx @nirholas/bnbchain-mcp --http
 ```
 
 ### Test Connection

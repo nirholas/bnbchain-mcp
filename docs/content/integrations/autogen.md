@@ -42,7 +42,7 @@ llm_config = {
 # Initialize MCP toolkit
 toolkit = MCPToolkit(
     server_command="npx",
-    server_args=["-y", "@nirholas/bnb-chain-mcp@latest"],
+    server_args=["-y", "@nirholas/bnbchain-mcp@latest"],
 )
 
 # Get tools as AutoGen functions
@@ -88,7 +88,7 @@ from mcp_autogen_tools import MCPToolkit
 # Initialize toolkit
 toolkit = MCPToolkit(
     server_command="npx",
-    server_args=["-y", "@nirholas/bnb-chain-mcp@latest"],
+    server_args=["-y", "@nirholas/bnbchain-mcp@latest"],
     env={"PRIVATE_KEY": "0x..."}  # For write operations
 )
 
@@ -578,7 +578,7 @@ class DeFiFundManager:
         self.config = config
         self.toolkit = MCPToolkit(
             server_command="npx",
-            server_args=["-y", "@nirholas/bnb-chain-mcp@latest"],
+            server_args=["-y", "@nirholas/bnbchain-mcp@latest"],
             env={"PRIVATE_KEY": private_key}
         )
         

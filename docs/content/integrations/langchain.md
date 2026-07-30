@@ -31,7 +31,7 @@ from mcp_langchain_tools import MCPToolkit
 # Initialize MCP connection
 toolkit = MCPToolkit(
     server_command="npx",
-    server_args=["-y", "@nirholas/bnb-chain-mcp@latest"],
+    server_args=["-y", "@nirholas/bnbchain-mcp@latest"],
     env={
         "PRIVATE_KEY": "0x...",  # Optional for write operations
     }
@@ -72,7 +72,7 @@ from mcp_langchain_tools import MCPToolkit
 
 toolkit = MCPToolkit(
     server_command="npx",
-    server_args=["-y", "@nirholas/bnb-chain-mcp@latest"],
+    server_args=["-y", "@nirholas/bnbchain-mcp@latest"],
 )
 
 # Get all tools
@@ -119,7 +119,7 @@ from mcp_langchain_tools import MCPToolkit
 # Setup
 toolkit = MCPToolkit(
     server_command="npx",
-    server_args=["-y", "@nirholas/bnb-chain-mcp@latest"],
+    server_args=["-y", "@nirholas/bnbchain-mcp@latest"],
     env={"PRIVATE_KEY": "0x..."}
 )
 
@@ -389,7 +389,7 @@ class YieldOptimizer:
         env = {"PRIVATE_KEY": private_key} if private_key else {}
         self.toolkit = MCPToolkit(
             server_command="npx",
-            server_args=["-y", "@nirholas/bnb-chain-mcp@latest"],
+            server_args=["-y", "@nirholas/bnbchain-mcp@latest"],
             env=env
         )
         

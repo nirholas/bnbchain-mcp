@@ -113,7 +113,7 @@ export class MCPClient {
 
   async connect(): Promise<void> {
     return new Promise((resolve, reject) => {
-      this.process = spawn('npx', ['-y', '@nirholas/bnb-chain-mcp@latest'], {
+      this.process = spawn('npx', ['-y', '@nirholas/bnbchain-mcp@latest'], {
         env: {
           ...process.env,
           PRIVATE_KEY: process.env.PRIVATE_KEY

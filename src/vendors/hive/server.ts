@@ -1,10 +1,10 @@
+#!/usr/bin/env node
 /**
  * @author Nich
  * @website x.com/nichxbt
  * @github github.com/nirholas
  * @license MIT
  */
-#!/usr/bin/env node
 import express from 'express';
 import cors from 'cors';
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";

@@ -1,10 +1,10 @@
+#!/usr/bin/env node
 /**
  * @author Nich
  * @website x.com/nichxbt
  * @github github.com/nirholas
  * @license MIT
  */
-#!/usr/bin/env node
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { registerTools } from './tools/toolFactory.js';

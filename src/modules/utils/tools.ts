@@ -486,33 +486,6 @@ export function registerUtilityTools(server: McpServer) {
     }
   )
 
-  // Sign message with private key
-  server.tool(
-    "sign_message",
-    "Sign an arbitrary message with a private key (EIP-191 personal sign)",
-    {
-      message: z.string().describe("Message to sign"),
-      privateKey: z.string().describe("Private key for signing")
-    },
-    async ({ message, privateKey }) => {
-      try {
-        const account = privateKeyToAccount(privateKey as `0x${string}`)
-        const signature = await account.signMessage({ message })
-        const messageHash = hashMessage(message)
-
-        return mcpToolRes.success({
-          message,
-          signer: account.address,
-          signature,
-          messageHash,
-          signatureLength: signature.length
-        })
-      } catch (error) {
-        return mcpToolRes.error(error, "signing message")
-      }
-    }
-  )
-
   // Verify message signature
   server.tool(
     "verify_signature",

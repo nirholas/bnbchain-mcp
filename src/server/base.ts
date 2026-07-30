@@ -15,7 +15,7 @@ export const startServer = () => {
   try {
     // Create a new MCP server instance
     const server = new McpServer({
-      name: "Universal Crypto MCP Server",
+      name: "BNB Chain MCP Server",
       version: "1.0.0"
     })
 

@@ -238,13 +238,15 @@ export function registerSecurityTools(server: McpServer) {
     }
   )
 
-  // Verify contract source
+  // Inspect deployed bytecode. Named distinctly from the deployment module's
+  // verify_contract, which submits source code to a block explorer; this one
+  // only reads on-chain state.
   server.tool(
-    "verify_contract",
-    "Check if a contract is verified and get basic verification status",
+    "check_contract_bytecode",
+    "Check whether an address holds contract bytecode and detect common proxy patterns",
     {
       network: defaultNetworkParam,
-      contractAddress: z.string().describe("Contract address to verify")
+      contractAddress: z.string().describe("Contract address to inspect")
     },
     async ({ network, contractAddress }) => {
       try {

@@ -110,7 +110,7 @@ Add to your `claude_desktop_config.json`:
   "mcpServers": {
     "bnb-chain-mcp": {
       "command": "npx",
-      "args": ["-y", "@nirholas/bnb-chain-mcp@latest"],
+      "args": ["-y", "@nirholas/bnbchain-mcp@latest"],
       "env": {
         "PRIVATE_KEY": "your_private_key_here (optional)"
       }
@@ -128,7 +128,7 @@ Add to your MCP settings:
   "mcpServers": {
     "bnb-chain-mcp": {
       "command": "npx",
-      "args": ["-y", "@nirholas/bnb-chain-mcp@latest"],
+      "args": ["-y", "@nirholas/bnbchain-mcp@latest"],
       "env": {
         "PRIVATE_KEY": "your_private_key_here (optional)"
       }

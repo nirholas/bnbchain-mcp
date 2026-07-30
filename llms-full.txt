@@ -71,7 +71,7 @@ BNB Chain MCP is a TypeScript-based Model Context Protocol (MCP) server that ena
 ### NPX (Recommended)
 
 ```bash
-npx @nirholas/bnb-chain-mcp@latest
+npx @nirholas/bnbchain-mcp@latest
 ```
 
 ### Local Development
@@ -94,7 +94,7 @@ Add to `claude_desktop_config.json`:
   "mcpServers": {
     "bnb-chain-mcp": {
       "command": "npx",
-      "args": ["-y", "@nirholas/bnb-chain-mcp@latest"],
+      "args": ["-y", "@nirholas/bnbchain-mcp@latest"],
       "env": {
         "PRIVATE_KEY": "0x...",
         "COINGECKO_API_KEY": "CG-xxx",
@@ -114,7 +114,7 @@ Add to MCP settings:
   "mcpServers": {
     "bnb-chain-mcp": {
       "command": "npx",
-      "args": ["-y", "@nirholas/bnb-chain-mcp@latest"],
+      "args": ["-y", "@nirholas/bnbchain-mcp@latest"],
       "env": {
         "PRIVATE_KEY": "0x..."
       }
@@ -126,7 +126,7 @@ Add to MCP settings:
 ### ChatGPT Developer Mode
 
 1. Enable Developer Mode in ChatGPT settings
-2. Start HTTP server: `npx @nirholas/bnb-chain-mcp@latest --http`
+2. Start HTTP server: `npx @nirholas/bnbchain-mcp@latest --http`
 3. Add app URL in ChatGPT: `http://localhost:3001/mcp`
 
 ---
@@ -2220,20 +2220,20 @@ LOG_LEVEL=INFO                # DEBUG, INFO, WARN, ERROR
 ### stdio Mode (Default)
 For Claude Desktop and Cursor:
 ```bash
-npx @nirholas/bnb-chain-mcp@latest
+npx @nirholas/bnbchain-mcp@latest
 ```
 
 ### HTTP Mode
 For ChatGPT Developer Mode:
 ```bash
-npx @nirholas/bnb-chain-mcp@latest --http
+npx @nirholas/bnbchain-mcp@latest --http
 # Server runs on http://localhost:3001/mcp
 ```
 
 ### SSE Mode
 For legacy HTTP clients:
 ```bash
-npx @nirholas/bnb-chain-mcp@latest --sse
+npx @nirholas/bnbchain-mcp@latest --sse
 # Server runs on http://localhost:3001/sse
 ```
 
@@ -2324,7 +2324,7 @@ AI uses:
 
 - **Documentation**: https://bnb-chain-mcp.vercel.app
 - **GitHub**: https://github.com/nirholas/bnb-chain-mcp
-- **npm Package**: @nirholas/bnb-chain-mcp
+- **npm Package**: @nirholas/bnbchain-mcp
 - **Author**: [nich](https://x.com/nichxbt)
 
 ---

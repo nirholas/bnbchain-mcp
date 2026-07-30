@@ -8,14 +8,15 @@
     "bnbchain-mcp": "./build/index.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsup",
     "dev": "ts-node src/index.ts",
     "start": "node build/index.js",
     "start:http": "node build/index.js --http",
     "start:sse": "node build/index.js --sse",
     "test": "vitest",
     "lint": "eslint src/",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [
     "bnb",
@@ -44,22 +45,35 @@
   },
   "homepage": "https://github.com/nirholas/bnbchain-mcp#readme",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.0.0",
-    "viem": "^2.0.0",
     "@bnb-chain/greenfield-js-sdk": "^2.0.0",
+    "@bnb-chain/reed-solomon": "^1.1.4",
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.2",
+    "libsodium-sumo": "^0.7.15",
+    "libsodium-wrappers-sumo": "^0.7.15",
+    "mime": "^4.1.0",
+    "reflect-metadata": "^0.2.2",
+    "superagent": "^9.0.2",
+    "viem": "^2.0.0",
     "zod": "^3.22.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.25",
     "@types/node": "^20.0.0",
-    "typescript": "^5.3.0",
-    "vitest": "^1.0.0",
     "eslint": "^8.0.0",
-    "ts-node": "^10.9.0"
+    "ts-node": "^10.9.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "type": "module"
 }

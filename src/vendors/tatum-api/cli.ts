@@ -1,10 +1,10 @@
+#!/usr/bin/env node
 /**
  * @author Nich
  * @website x.com/nichxbt
  * @github github.com/nirholas
  * @license MIT
  */
-#!/usr/bin/env node
 /**
  * Universal Crypto MCP Server CLI
  * 

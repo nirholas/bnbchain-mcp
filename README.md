@@ -185,7 +185,7 @@ Add to your `claude_desktop_config.json`:
   "mcpServers": {
     "bnb-chain-mcp": {
       "command": "npx",
-      "args": ["-y", "@nirholas/bnb-chain-mcp@latest"]
+      "args": ["-y", "@nirholas/bnbchain-mcp@latest"]
     }
   }
 }
@@ -211,7 +211,7 @@ Add to your MCP settings:
   "mcpServers": {
     "bnb-chain-mcp": {
       "command": "npx",
-      "args": ["-y", "@nirholas/bnb-chain-mcp@latest"]
+      "args": ["-y", "@nirholas/bnbchain-mcp@latest"]
     }
   }
 }
@@ -222,7 +222,7 @@ Add to your MCP settings:
 1. Enable [Developer Mode](https://chatgpt.com/#settings/Connectors/Advanced) in ChatGPT settings
 2. Start the HTTP server:
    ```bash
-   npx @nirholas/bnb-chain-mcp@latest --http
+   npx @nirholas/bnbchain-mcp@latest --http
    ```
 3. In ChatGPT Settings → Apps, click **Create app**
 4. Enter your server URL: `http://localhost:3001/mcp`
@@ -234,13 +234,13 @@ Add to your MCP settings:
 
 ```bash
 # stdio mode (Claude, Cursor)
-npx @nirholas/bnb-chain-mcp@latest
+npx @nirholas/bnbchain-mcp@latest
 
 # HTTP mode (ChatGPT Developer Mode)
-npx @nirholas/bnb-chain-mcp@latest --http
+npx @nirholas/bnbchain-mcp@latest --http
 
 # SSE mode (legacy clients)
-npx @nirholas/bnb-chain-mcp@latest --sse
+npx @nirholas/bnbchain-mcp@latest --sse
 ```
 
 ---
@@ -376,7 +376,7 @@ npx @nirholas/bnb-chain-mcp@latest --sse
   "mcpServers": {
     "bnb-chain-mcp": {
       "command": "npx",
-      "args": ["-y", "@nirholas/bnb-chain-mcp@latest"],
+      "args": ["-y", "@nirholas/bnbchain-mcp@latest"],
       "env": {
         "CUSTOM_RPC_56": "https://your-bnb-rpc.com",
         "CUSTOM_RPC_1": "https://your-eth-rpc.com"
@@ -394,29 +394,29 @@ npx @nirholas/bnb-chain-mcp@latest --sse
 
 | Mode | Command | Use Case |
 |------|---------|----------|
-| **stdio** | `npx @nirholas/bnb-chain-mcp` | Claude Desktop, Cursor |
-| **HTTP** | `npx @nirholas/bnb-chain-mcp --http` | ChatGPT Developer Mode |
-| **SSE** | `npx @nirholas/bnb-chain-mcp --sse` | Legacy HTTP clients |
+| **stdio** | `npx @nirholas/bnbchain-mcp` | Claude Desktop, Cursor |
+| **HTTP** | `npx @nirholas/bnbchain-mcp --http` | ChatGPT Developer Mode |
+| **SSE** | `npx @nirholas/bnbchain-mcp --sse` | Legacy HTTP clients |
 
 ### From npm (Recommended)
 
 ```bash
 # Run directly with npx (no install required)
-npx @nirholas/bnb-chain-mcp@latest
+npx @nirholas/bnbchain-mcp@latest
 
 # Or install globally
-npm install -g @nirholas/bnb-chain-mcp
+npm install -g @nirholas/bnbchain-mcp
 
 # Then run
-bnb-chain-mcp
+bnbchain-mcp
 ```
 
 ### From Source
 
 ```bash
 # Clone
-git clone https://github.com/nirholas/bnb-chain-mcp
-cd bnb-chain-mcp
+git clone https://github.com/nirholas/bnbchain-mcp
+cd bnbchain-mcp
 
 # Install dependencies
 bun install
@@ -471,7 +471,7 @@ docker run -p 3001:3001 bnb-chain-mcp --http
   "mcpServers": {
     "bnb-chain-mcp": {
       "command": "npx",
-      "args": ["-y", "@nirholas/bnb-chain-mcp@latest"],
+      "args": ["-y", "@nirholas/bnbchain-mcp@latest"],
       "env": {
         "PRIVATE_KEY": "0x...",
         "COINGECKO_API_KEY": "CG-xxx",
@@ -679,7 +679,7 @@ src/
    ```
 3. Try installing globally:
    ```bash
-   npm install -g @nirholas/bnb-chain-mcp
+   npm install -g @nirholas/bnbchain-mcp
    ```
 
 </details>
@@ -1502,12 +1502,12 @@ This MCP server integrates with the following APIs:
 
 ## 🔗 Related MCP Servers
 
-Additional specialized MCP servers in this workspace:
+Related MCP servers, each maintained in its own repository:
 
 | Server | Description | Tools |
 |--------|-------------|-------|
-| [binance-mcp-server](./binance-mcp-server/) | Binance.com global exchange API | 156+ tools |
-| [binance-us-mcp-server](./binance-us-mcp-server/) | Binance.US exchange API | 71+ tools |
+| [Binance-MCP](https://github.com/nirholas/Binance-MCP) | Binance.com global exchange API | 156+ tools |
+| [Binance-US-MCP](https://github.com/nirholas/Binance-US-MCP) | Binance.US exchange API | 71+ tools |
 
 ### Binance.com Server
 Full Binance global API coverage including:
@@ -1562,8 +1562,8 @@ We welcome contributions! Here's how to get started:
 
 ```bash
 # Fork and clone
-git clone https://github.com/YOUR_USERNAME/bnb-chain-mcp
-cd bnb-chain-mcp
+git clone https://github.com/nirholas/bnbchain-mcp
+cd bnbchain-mcp
 
 # Install dependencies
 bun install
@@ -1622,7 +1622,7 @@ Built by **[nich](https://x.com/nichxbt)** ([github.com/nirholas](https://github
 
 If you find this project useful, please consider giving it a ⭐️
 
-[![GitHub stars](https://img.shields.io/github/stars/nirholas/bnb-chain-mcp?style=social)](https://github.com/nirholas/bnb-chain-mcp)
+[![GitHub stars](https://img.shields.io/github/stars/nirholas/bnbchain-mcp?style=social)](https://github.com/nirholas/bnbchain-mcp)
 
 <br/>
 

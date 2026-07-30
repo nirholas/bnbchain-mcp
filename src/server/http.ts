@@ -55,7 +55,7 @@ export const startHTTPServer = async () => {
     app.get("/health", (_req: Request, res: Response) => {
       res.json({
         status: "healthy",
-        name: "Universal Crypto MCP",
+        name: "BNB Chain MCP",
         version: "1.0.0",
         sessions: sessions.size,
         timestamp: new Date().toISOString()
@@ -65,7 +65,7 @@ export const startHTTPServer = async () => {
     // Server info endpoint (for ChatGPT app discovery)
     app.get("/", (_req: Request, res: Response) => {
       res.json({
-        name: "Universal Crypto MCP",
+        name: "BNB Chain MCP",
         version: "1.0.0",
         description: "Universal MCP server for all EVM-compatible networks",
         protocol: "mcp",
@@ -197,7 +197,7 @@ export const startHTTPServer = async () => {
 
     const PORT = process.env.PORT || 3001
     app.listen(PORT, () => {
-      Logger.info(`Universal Crypto MCP HTTP Server running on http://localhost:${PORT}`)
+      Logger.info(`BNB Chain MCP HTTP Server running on http://localhost:${PORT}`)
       Logger.info(`ChatGPT Developer Mode URL: http://localhost:${PORT}/mcp`)
       Logger.info(`Health check: http://localhost:${PORT}/health`)
     })

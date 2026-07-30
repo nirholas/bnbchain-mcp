@@ -12,9 +12,9 @@ BNB-Chain-MCP provides **120+ tools** across multiple categories for interacting
 
 | Mode | Command | Port | Use Case |
 |------|---------|------|----------|
-| **stdio** | `npx @nirholas/bnb-chain-mcp` | N/A | Claude Desktop, Cursor |
-| **HTTP** | `npx @nirholas/bnb-chain-mcp --http` | 3001 | ChatGPT Developer Mode |
-| **SSE** | `npx @nirholas/bnb-chain-mcp --sse` | 3001 | Legacy HTTP clients |
+| **stdio** | `npx @nirholas/bnbchain-mcp` | N/A | Claude Desktop, Cursor |
+| **HTTP** | `npx @nirholas/bnbchain-mcp --http` | 3001 | ChatGPT Developer Mode |
+| **SSE** | `npx @nirholas/bnbchain-mcp --sse` | 3001 | Legacy HTTP clients |
 
 ### Supported Networks
 
