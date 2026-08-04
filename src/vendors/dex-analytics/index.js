@@ -115,10 +115,10 @@ server.tool(
     page: z.number().optional().default(0).describe('Page number for pagination'),
     limit: z.number().optional().default(10).describe('Number of items per page (max 100)'),
     sort: z.enum(['asc', 'desc']).optional().default('desc').describe('Sort order'),
-    orderBy: z.enum(['volume_usd', 'price_usd', 'transactions', 'last_price_change_usd_24h', 'created_at']).optional().default('volume_usd').describe('Field to order by')
+    orderBy: z.enum(['volume_usd_24h', 'volume_usd_7d', 'volume_usd_30d', 'liquidity_usd', 'txns_24h', 'created_at', 'price_usd', 'price_change_percentage_24h', 'price_change_percentage_6h']).optional().default('volume_usd_24h').describe('Field to order by')
   },
   async ({ network, page, limit, sort, orderBy }) => {
-    const data = await fetchFromAPI(`/networks/${network}/pools?page=${page}&limit=${limit}&sort=${sort}&order_by=${orderBy}`);
+    const data = await fetchFromAPI(`/networks/${network}/pools/search?page=${page}&limit=${limit}&sort=${sort}&order_by=${orderBy}`);
     return formatMcpResponse(data);
   }
 );
@@ -180,18 +180,10 @@ server.tool(
     page: z.number().optional().default(0).describe('Page number for pagination'),
     limit: z.number().optional().default(10).describe('Number of items per page (max 100)'),
     sort: z.enum(['asc', 'desc']).optional().default('desc').describe('Sort order'),
-    orderBy: z.enum(['volume_usd', 'price_usd', 'transactions', 'last_price_change_usd_24h', 'created_at']).optional().default('volume_usd').describe('Field to order by'),
-    reorder: z.boolean().optional().describe('If true, reorders the pool so that the specified token becomes the primary token for all metrics'),
-    address: z.string().optional().describe('Filter pools that contain this additional token address')
+    orderBy: z.enum(['volume_usd_24h', 'volume_usd_7d', 'volume_usd_30d', 'liquidity_usd', 'txns_24h', 'created_at', 'price_usd', 'price_change_percentage_24h', 'price_change_percentage_6h']).optional().default('volume_usd_24h').describe('Field to order by')
   },
-  async ({ network, tokenAddress, page, limit, sort, orderBy, reorder, address }) => {
-    let endpoint = `/networks/${network}/tokens/${tokenAddress}/pools?page=${page}&limit=${limit}&sort=${sort}&order_by=${orderBy}`;
-    if (reorder !== undefined) {
-      endpoint += `&reorder=${reorder}`;
-    }
-    if (address) {
-      endpoint += `&address=${encodeURIComponent(address)}`;
-    }
+  async ({ network, tokenAddress, page, limit, sort, orderBy }) => {
+    const endpoint = `/networks/${network}/pools/search?token_address=${encodeURIComponent(tokenAddress)}&page=${page}&limit=${limit}&sort=${sort}&order_by=${orderBy}`;
     const data = await fetchFromAPI(endpoint);
     return formatMcpResponse(data);
   }

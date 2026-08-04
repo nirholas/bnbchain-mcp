@@ -86,11 +86,14 @@ export function registerDexAnalyticsTools(server: McpServer) {
       page: z.number().optional().default(0).describe("Page number for pagination"),
       limit: z.number().optional().default(10).describe("Results per page (max 100)"),
       sort: z.enum(["asc", "desc"]).optional().default("desc").describe("Sort order"),
-      orderBy: z.enum(["volume_usd", "price_usd", "transactions", "last_price_change_usd_24h", "created_at"])
-        .optional().default("volume_usd").describe("Field to order by")
+      orderBy: z.enum([
+        "volume_usd_24h", "volume_usd_7d", "volume_usd_30d", "liquidity_usd",
+        "txns_24h", "created_at", "price_usd",
+        "price_change_percentage_24h", "price_change_percentage_6h"
+      ]).optional().default("volume_usd_24h").describe("Field to order by")
     },
     async (params) => {
-      const endpoint = `/networks/${params.network}/pools?page=${params.page}&limit=${params.limit}&sort=${params.sort}&order_by=${params.orderBy}`
+      const endpoint = `/networks/${params.network}/pools/search?page=${params.page}&limit=${params.limit}&sort=${params.sort}&order_by=${params.orderBy}`
       const data = await dexPaprikaRequest(endpoint)
       if (!data) {
         return { content: [{ type: "text" as const, text: "Failed to fetch pools" }] }
@@ -169,19 +172,14 @@ export function registerDexAnalyticsTools(server: McpServer) {
       page: z.number().optional().default(0).describe("Page number"),
       limit: z.number().optional().default(10).describe("Results per page (max 100)"),
       sort: z.enum(["asc", "desc"]).optional().default("desc").describe("Sort order"),
-      orderBy: z.enum(["volume_usd", "price_usd", "transactions", "last_price_change_usd_24h", "created_at"])
-        .optional().default("volume_usd").describe("Field to order by"),
-      reorder: z.boolean().optional().describe("Reorder so specified token is primary"),
-      pairedWith: z.string().optional().describe("Filter pools paired with this token address")
+      orderBy: z.enum([
+        "volume_usd_24h", "volume_usd_7d", "volume_usd_30d", "liquidity_usd",
+        "txns_24h", "created_at", "price_usd",
+        "price_change_percentage_24h", "price_change_percentage_6h"
+      ]).optional().default("volume_usd_24h").describe("Field to order by")
     },
     async (params) => {
-      let endpoint = `/networks/${params.network}/tokens/${params.tokenAddress}/pools?page=${params.page}&limit=${params.limit}&sort=${params.sort}&order_by=${params.orderBy}`
-      if (params.reorder !== undefined) {
-        endpoint += `&reorder=${params.reorder}`
-      }
-      if (params.pairedWith) {
-        endpoint += `&address=${encodeURIComponent(params.pairedWith)}`
-      }
+      const endpoint = `/networks/${params.network}/pools/search?token_address=${encodeURIComponent(params.tokenAddress)}&page=${params.page}&limit=${params.limit}&sort=${params.sort}&order_by=${params.orderBy}`
       const data = await dexPaprikaRequest(endpoint)
       if (!data) {
         return { content: [{ type: "text" as const, text: "Failed to fetch token pools" }] }
