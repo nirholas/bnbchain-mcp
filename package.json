@@ -1,6 +1,6 @@
 {
   "name": "@nirholas/bnbchain-mcp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Model Context Protocol (MCP) server for BNB Chain - BSC EVM and Greenfield decentralized storage",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -46,7 +46,7 @@
   },
   "homepage": "https://github.com/nirholas/bnbchain-mcp#readme",
   "dependencies": {
-    "@bnb-chain/greenfield-js-sdk": "^2.0.0",
+    "@bnb-chain/greenfield-js-sdk": "^2.2.2",
     "@bnb-chain/reed-solomon": "^1.1.4",
     "@modelcontextprotocol/sdk": "^1.30.0",
     "cors": "^2.8.6",
