@@ -7,16 +7,17 @@
 import "reflect-metadata"
 
 import { readFileSync } from "fs"
+import { fileURLToPath } from "url"
 import { NodeAdapterReedSolomon } from "@bnb-chain/reed-solomon/node.adapter"
-import { expect, setDefaultTimeout, test } from "bun:test"
+import { expect, test, vi } from "vitest"
 
 import { getMimeType } from "../util"
 
-setDefaultTimeout(50000)
-const fileName = __filename
+vi.setConfig({ testTimeout: 50000 })
+const fileName = fileURLToPath(import.meta.url)
 
 test("test get mime type", async () => {
-  expect(getMimeType(__filename)).toBe("application/javascript")
+  expect(getMimeType(fileName)).toBe("application/javascript")
   expect(getMimeType("dist/test.pdf")).toBe("application/pdf")
 })
 
