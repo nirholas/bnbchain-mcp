@@ -79,5 +79,6 @@
   "type": "module",
   "overrides": {
     "protobufjs": "^7.6.3"
-  }
+  },
+  "mcpName": "io.github.nirholas/bnbchain-mcp"
 }
