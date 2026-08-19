@@ -2,28 +2,16 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.nirholas/bnbchain-mcp",
   "title": "BNB Chain MCP",
-  "description": "Developer tools for AI crypto agents - DeFi trading, DEX swaps, smart contracts, tokens, staking, bridging on BSC and opBNB",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "nich",
-      "url": "https://github.com/nirholas"
-    }
-  ],
+  "description": "Developer tools for AI crypto agents - DeFi trading, DEX swaps, smart contracts, tokens, staking",
   "repository": {
     "url": "https://github.com/nirholas/bnbchain-mcp",
     "source": "github"
   },
   "version": "1.0.0",
-  "links": {
-    "homepage": "https://github.com/nirholas/bnbchain-mcp",
-    "bugs": "https://github.com/nirholas/bnbchain-mcp/issues",
-    "npm": "https://www.npmjs.com/package/@nirholas/bnbchain-mcp"
-  },
   "icons": [
     {
-      "url": "https://raw.githubusercontent.com/nirholas/g1t/d9a0ee206b8136472c04384905999369f198b3c9/milady.svg",
-      "type": "svg"
+      "src": "https://raw.githubusercontent.com/nirholas/g1t/d9a0ee206b8136472c04384905999369f198b3c9/milady.svg",
+      "mimeType": "image/svg+xml"
     }
   ],
   "packages": [
