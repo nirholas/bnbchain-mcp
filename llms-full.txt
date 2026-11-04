@@ -2322,7 +2322,7 @@ AI uses:
 
 ## Links & Resources
 
-- **Documentation**: https://bnb-chain-mcp.vercel.app
+- **Documentation**: https://bnbchain-mcp.modelcontextprotocol.name
 - **GitHub**: https://github.com/nirholas/bnb-chain-mcp
 - **npm Package**: @nirholas/bnbchain-mcp
 - **Author**: [nich](https://x.com/nichxbt)

@@ -45,7 +45,7 @@
 
 <br/>
 
-[📖 Documentation](https://bnbchain-mcp-docs-lp642k3kpa-uc.a.run.app) • [🚀 Quick Start](#-quick-start) • [🛠️ Features](#-features-overview) • [📊 Roadmap](#️-roadmap) • [🤝 Contributing](#-contributing)
+[📖 Documentation](https://bnbchain-mcp.modelcontextprotocol.name) • [🚀 Quick Start](#-quick-start) • [🛠️ Features](#-features-overview) • [📊 Roadmap](#️-roadmap) • [🤝 Contributing](#-contributing)
 
 </div>
 
@@ -228,7 +228,7 @@ Add to your MCP settings:
 4. Enter your server URL: `http://localhost:3001/mcp`
 5. Select the app in conversations via **Developer mode** menu
 
-📖 [Full ChatGPT Setup Guide](https://bnbchain-mcp-docs-lp642k3kpa-uc.a.run.app/mcp-server/chatgpt-setup/)
+📖 [Full ChatGPT Setup Guide](https://bnbchain-mcp.modelcontextprotocol.name/mcp-server/chatgpt-setup/)
 
 ### Option 4: npx Instant Start
 
@@ -285,7 +285,7 @@ npx @nirholas/bnbchain-mcp@latest --sse
 | `estimate_gas` | Estimate gas for transaction |
 | `get_balance` | Get native/token balance |
 | `call_contract` | Call view/pure contract functions |
-| ... | [See full list →](https://bnbchain-mcp-docs-lp642k3kpa-uc.a.run.app/tools/blockchain) |
+| ... | [See full list →](https://bnbchain-mcp.modelcontextprotocol.name/api/tools/network-tools/) |
 
 </details>
 
@@ -300,7 +300,7 @@ npx @nirholas/bnbchain-mcp@latest --sse
 | `approve_token` | Approve spending allowance |
 | `get_nft_metadata` | Get NFT metadata and traits |
 | `transfer_nft` | Transfer ERC-721 NFT |
-| ... | [See full list →](https://bnbchain-mcp-docs-lp642k3kpa-uc.a.run.app/tools/tokens) |
+| ... | [See full list →](https://bnbchain-mcp.modelcontextprotocol.name/api/tools/tokens-tools/) |
 
 </details>
 
@@ -315,7 +315,7 @@ npx @nirholas/bnbchain-mcp@latest --sse
 | `get_lending_rates` | Get Aave/Compound rates |
 | `supply_to_lending` | Supply assets to lending protocol |
 | `get_farming_apy` | Get yield farming APY |
-| ... | [See full list →](https://bnbchain-mcp-docs-lp642k3kpa-uc.a.run.app/tools/defi) |
+| ... | [See full list →](https://bnbchain-mcp.modelcontextprotocol.name/api/tools/swap-tools/) |
 
 </details>
 
@@ -330,7 +330,7 @@ npx @nirholas/bnbchain-mcp@latest --sse
 | `get_holder_distribution` | Get top holder breakdown |
 | `check_contract_verified` | Verify contract source |
 | `screen_address` | Check address risk score |
-| ... | [See full list →](https://bnbchain-mcp-docs-lp642k3kpa-uc.a.run.app/tools/security) |
+| ... | [See full list →](https://bnbchain-mcp.modelcontextprotocol.name/api/tools/security-tools/) |
 
 </details>
 
@@ -345,7 +345,7 @@ npx @nirholas/bnbchain-mcp@latest --sse
 | `get_tvl` | Get protocol TVL from DefiLlama |
 | `get_dex_pools` | Get DEX pool data |
 | `get_social_metrics` | Get LunarCrush sentiment |
-| ... | [See full list →](https://bnbchain-mcp-docs-lp642k3kpa-uc.a.run.app/tools/market-data) |
+| ... | [See full list →](https://bnbchain-mcp.modelcontextprotocol.name/api/tools/market-data-tools/) |
 
 </details>
 
@@ -1910,14 +1910,14 @@ curl -X POST https://modelcontextprotocol.name/mcp/bnbchain-mcp \
 
 ### Also Available On
 
-- **[SperaxOS](https://speraxos.vercel.app)** — Browse and install from the [MCP marketplace](https://speraxos.vercel.app/community/mcp)
+- **[SperaxOS](https://chat.sperax.io)** — Browse and install from the [MCP marketplace](https://chat.sperax.io/community/mcp)
 - **All 27 MCP servers** — See the full catalog at [modelcontextprotocol.name](https://modelcontextprotocol.name)
 
 > Powered by [modelcontextprotocol.name](https://modelcontextprotocol.name) — the open MCP HTTP gateway
 
 ## Documentation
 
-Full documentation site: **https://nirholas.github.io/bnbchain-mcp/**
+Full documentation site: **https://bnbchain-mcp.modelcontextprotocol.name** (Cloudflare Pages; build and deploy steps in [docs/content/contributing/docs-deployment.md](docs/content/contributing/docs-deployment.md)).
 
 - [Getting started](docs/getting-started.md) covers install and first run.
 - [Examples](docs/examples.md) has copy-paste snippets.

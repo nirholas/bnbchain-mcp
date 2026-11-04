@@ -1,10 +1,10 @@
 site_name: BNB-Chain-MCP
-site_url: https://bnb-chain-mcp.vercel.app
+site_url: https://bnbchain-mcp.modelcontextprotocol.name/
 site_description: MCP server for BNB Chain and EVM-compatible networks
 site_author: nich
 
-repo_name: nirholas/universal-crypto-mcp
-repo_url: https://github.com/nirholas/universal-crypto-mcp
+repo_name: nirholas/bnbchain-mcp
+repo_url: https://github.com/nirholas/bnbchain-mcp
 edit_uri: edit/main/docs/content/
 
 theme:
@@ -107,3 +107,4 @@ nav:
     - Rate Limits: reference/rate-limits.md
   - Contributing:
     - Subtree Sync: contributing/subtree-sync.md
+    - Docs Deployment: contributing/docs-deployment.md
