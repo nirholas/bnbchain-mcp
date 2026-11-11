@@ -1,0 +1,1 @@
+{"mcpServers":{"bnbchain-mcp":{"command":"npx","args":["-y","@nirholas/bnbchain-mcp"]}}}
