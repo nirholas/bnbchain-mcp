@@ -58,7 +58,7 @@
     "reflect-metadata": "^0.2.2",
     "superagent": "^9.0.2",
     "viem": "^2.0.0",
-    "zod": "^3.25.76"
+    "zod": "^4.6.6"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
@@ -68,7 +68,9 @@
     "ts-node": "^10.9.0",
     "tsup": "^8.5.1",
     "typescript": "^5.3.0",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.10",
+    "elliptic": "file:vendor/elliptic",
+    "lodash.set": "file:vendor/lodash.set"
   },
   "engines": {
     "node": ">=18.0.0"
@@ -78,7 +80,11 @@
   },
   "type": "module",
   "overrides": {
-    "protobufjs": "^7.6.3"
+    "protobufjs": "^7.6.3",
+    "fast-xml-parser@^4": "^5.12.0",
+    "qs@^6": "^6.16.1",
+    "elliptic": "$elliptic",
+    "lodash.set": "$lodash.set"
   },
   "mcpName": "io.github.nirholas/bnbchain-mcp"
 }

@@ -1,10 +1,10 @@
+#!/usr/bin/env node
 /**
  * @author Nich
  * @website x.com/nichxbt
  * @github github.com/nirholas
  * @license MIT
  */
-#!/usr/bin/env node
 
 import dotenv from "dotenv";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";

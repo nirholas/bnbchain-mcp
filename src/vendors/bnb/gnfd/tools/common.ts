@@ -17,13 +17,14 @@ export const networkParam = z
   .default("testnet")
   .describe("Network name (e.g. 'testnet', 'mainnet'). Defaults to testnet.")
 
+// The environment key is applied after parsing so it never appears in the published tool schema.
 export const privateKeyParam = z
   .string()
-  .optional()
-  .default(DEFAULT_PRIVATE_KEY)
   .describe(
     "Private key of the account in hex format. SECURITY: This is used only for transaction signing."
   )
+  .optional()
+  .transform((value) => value ?? DEFAULT_PRIVATE_KEY)
 
 export const bucketNameParam = z
   .string()

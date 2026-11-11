@@ -101,7 +101,7 @@ export function registerContractTools(server: McpServer) {
         .describe(
           "Private key of the sending account. Used only for transaction signing."
         )
-        .default(process.env.PRIVATE_KEY as string),
+        .optional().transform((value) => value ?? (process.env.PRIVATE_KEY as string)),
       network: defaultNetworkParam
     },
     async ({
